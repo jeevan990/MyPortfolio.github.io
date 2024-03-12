@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Portfolio</title>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  background-color: #000;
+  color: cyan;
+}
+
+.bgimg-1 {
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("download.jpg");
+  min-height: 100%;
+}
+.bgimg-2 {
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-2 {
+  background-image: url("leafy-freshness-a-vibrant-plant-composition-for-design-project-plant-background-photo.jpeg");
+  min-height: 70%;
+}
+.caption {
+  position: absolute;
+  left: 10%;
+  right:10%;
+  top: 0%;
+  width: 90%;
+  text-align: left;
+}
+
+span.border {
+  color: #9baf59;
+  padding: 18px;
+  font-size: 40px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px ,"Lato", sans-serif;
+  color: #111;
+  
+}
+ .caption .border{
+     font-size: 160px;
+     color: red;
+     font-weight: 600;
+     transition: 0.5s;
+
+ }
+ .caption .border:hover{
+     -webkit-text-stroke: 2px #fff;
+     color: transparent;
+
+ }
+ .container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.box {
+  width: 400px;
+  height: 100px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+}
+
+.box:hover {
+  background-color: red;
+  transform: scale(1.05); /* Grow by 5% when hovered */
+}
+header {
+  background-color: black;
+  color: #fff;
+}
+
+nav ul {
+  list-style-type: none;
+  font-size: larger;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block; /* Changed to inline-block */
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color:transparent;
+}
+.container1 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.container1 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.box1 {
+  
+  position: relative; /* Add relative positioning */
+  width: 400px;
+  height: 150px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.box1:hover {
+  width: 350px;
+  height: 250px;
+  text-align: center;
+  background-color: orange;
+
+}
+
+.box1:hover h2 {
+  display: none; /* Hide heading when box is hovered over */
+}
+
+.box1 h2 {
+  margin: 0;
+  padding-top:30px;
+  font-size: 25px;
+}
+
+.box1 .info {
+  display: none;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    text-align: left;
+
+}
+
+
+.box1:hover .info {
+  display: block;
+  text-align: left;
+
+}
+
+.contact {
+  margin-top: 20px;
+}
+
+.contact h2 {
+  margin-bottom: 10px;
+}
+
+.contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact ul li {
+  margin-bottom: 5px;
+}/* Style for the contact button */
+#contactButton {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#contactButton:hover{
+    background-color: orange;
+}
+/* Style for the contact form */
+#contactForm {
+  text-align: center;
+  display: none;
+  margin-top: 20px;
+}
+
+/* Style for the text fields */
+input[type="tel"],
+input[type="email"],
+textarea {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+/* Style for the send button */
+#sendMessageButton {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#sendMessageButton:hover {
+  background-color: orange;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+</style>
+<script>
+  function redirectToWebsite1() {
+  window.open("https://github.com/jeevan990", "_blank"); // Replace "https://example.com" with the URL of the website you want to redirect to
+}
+function redirectToWebsite2() {
+    window.open("https://www.linkedin.com/in/jeevankumar567/", "_blank");// Replace "https://example.com" with the URL of the website you want to redirect to
+}
+function redirectToWebsite3() {
+    window.open("./docs/jeevanKumar.pdf", "_blank");// Replace "path/to/your/pdf/file.pdf" with the actual path to your PDF file
+}
+
+function sendMessage() {
+  var phone = document.getElementById('phone').value;
+  var email = document.getElementById('email').value;
+  var message = document.getElementById('message').value;
+
+  // Replace the following line with code to send the message to the owner
+  console.log("Sending message:", message);
+
+  // Show alert to the user
+  alert('Message sent successfully!');
+
+  // Clear input fields
+  document.getElementById('phone').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('message').value = '';
+
+  // Hide the contact form
+  document.getElementById('contactForm').style.display = 'none';
+}
+function showContactForm() {
+  var contactForm = document.getElementById('contactForm');
+  contactForm.style.display = 'block';
+}
+
+function sendMessage() {
+  var message = document.getElementById('message').value;
+  // Replace the following line with code to send the message to the owner
+  console.log("Sending message:", message);
+  alert('Message sent successfully!'); // Show an alert to the user
+  document.getElementById('message').value = ''; // Clear the textarea
+}
+
+
+
+</script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#aboutme">About me</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+      </ul>
+    </nav>
+  </header>
+<div class="bgimg-1">
+  <div class="caption">
+  <span class="border"> <p id="changingText"></p>
+
+    <script>
+      var changingText = document.getElementById('changingText');
+      var texts = ["Hi,", "I'm Jeevan","Frontend,","Web Developer"]; // Array of texts to cycle through
+      var index = 0; // Initial index
+    
+      setInterval(function() {
+        changingText.textContent = texts[index]; // Set text content to current index
+        index = (index + 1) % texts.length; // Increment index and loop back to 0 when it reaches the end
+      }, 1000); // Change text every second (1000 milliseconds)
+    </script></span>
+  </div>
+</div>
+
+<div id="aboutme" style="color: white;
+     background-color:black;
+		 text-align:center;
+		 padding:50px 80px;
+		 text-align: justify;
+     font-size:30px">
+  <h3 style="text-align:center; color: white;">I'm a </h3>
+  <h1 style="text-align:center;">Web Developer</h1>
+  <p>&nbsp;&nbsp;&nbsp;Enthusiastic self-taught developer with a passion for crafting beautiful and functional applications. 
+    Eager to learn, grow, and collaborate on building extraordinary projects. 
+    Let's create something amazing together!</p>
+  <p>
+   
+    <div class="container" id="resume">
+      <div class="box" onclick="redirectToWebsite3()">
+        Resume
+      </div>
+      <div class="box" onclick="redirectToWebsite1()">
+        Github
+      </div>
+      <div class="box" onclick="redirectToWebsite2()">
+        linkedin
+      </div>
+    </div>
+        
+  </p>
+  <p>
+    <p>
+      <h3 style="text-align:center; color: white;">Education</h3>
+    </p>
+  </p>
+  <div class="container1">
+    <div class="box1" id="box1">
+      <h2>Bachelor of Technology</h2>
+      <p class="info">Computer science and Engineering from
+        <br>S J C Institute Of Technology
+        </p>
+    </div>
+    <div class="box1" id="box1">
+      <h2>XII</h2>
+      <p class="info">M P C from Narayana Jr Collage, Anantapur, Andhra Predesh, With an overall 72%</p>
+    </div>
+    <div class="box1" id="box1">
+      <h2>X</h2>
+      <p class="info">X - 2018 from sri chaitanya school, Anantapur, Andhra Pradesh,with an overall GPA: 85%</p>
+    </div>
+  </div>
+  <p>
+    <p>
+      <h3 style="text-align:center; color: white;">Skill</h3>
+    </p>
+  </p>
+  <div class="container1">
+    <div class="box1" id="box1">
+      <h2>Web Development</h2>
+      <p class="info"> HTML <br> CSS <br> Javascript <br> MySQL <br> MangoDB</p>
+    </div>
+    <div class="box1" id="box1">
+      <h2>Machine Learning & Data Science</h2>
+      <p class="info"> Python <br> Numpy <br> Jupyter Notebook</p> </div>
+    <div class="box1" id="box1">
+      <h2>Languages  & others</h2>
+      <p class="info" >
+        <p class="info" >  Arduino UNO<br> Git <br> Linux (Ubuntu, Red Hat)</p> </p>
+          <body>
+
+
+
+    </div>
+  </div>
+</div>
+
+<div id="contact" class="center">
+<button id="contactButton" onclick="showContactForm()"  class="info">Contact </button>
+</div>
+<div id="contactForm" style="display: none;">
+  <input type="tel" id="phone" name="phone" placeholder="Phone Number" required><br>
+  <input type="email" id="email" name="email" placeholder="Email" required><br>
+  <textarea id="message" name="message" rows="4" placeholder="Type your message here..." required></textarea><br>
+  <button id="sendMessageButton" onclick="sendMessage()" class="info">Send</button>
+</div>
+</body>
+</html>
+
+  
+
+
+
+</html>
